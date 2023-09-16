@@ -1,10 +1,10 @@
-<!-- Inline Script -->
+<!--using p5util-->
 <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>명규민 W2 Sketch1</title>
+    <title>명규민 W2 Sketch8</title>
     <link
       href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
       rel="stylesheet"
@@ -12,36 +12,34 @@
     <link rel="stylesheet" href="../../../../style/style.css" />
     <link rel="stylesheet" href="../../../../plugin/prism/prism.css" />
     <script src="../../../../plugin/prism/prism.js" defer></script>
-    <script>
-      alert('안녕하세요.');
-      prompt('샌즈 아시나요?');
-      let YourName;
-      YourName = prompt('당신의 이름은?', '파피루스');
-      confirm('와 샌즈 아시는구나! 진.짜.겁.나.쎕.니.다.');
-      confirm('당신의 이름은 ' + YourName + ' 입니까?');
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/p5.min.js"></script>
+    <script src="../../../../script/p5Util.js" defer></script>
+    <script src="./script/basicDrawing.js" defer></script>
   </head>
   <body>
     <div class="viewport">
       <header>
         <section>
           <div class="container">
-            <h1>명규민 W2 Sketch1</h1>
+            <h1>명규민 W2 Sketch8</h1>
           </div>
         </section>
       </header>
       <main>
         <section>
-          <div class="container"></div>
+          <div class="container">
+            <div id="p5-canvas"></div>
+          </div>
         </section>
       </main>
       <footer>
         <section>
           <div class="container">
-            <h6>index.html</h6>
+            <h2>코드</h2>
+            <h6>basicDrawing.js</h6>
             <pre
               class="line-numbers"
-              data-src="./index.html"
+              data-src="./script/basicDrawing.js"
               data-download-link></pre>
           </div>
         </section>
