@@ -42,9 +42,7 @@ function show() {
   let v0 = createVector();
   let v1 = p5.Vector.random2D();
   drawArrow(v0, v1.mult(50), 'red');
-
-  weightLimit = p5.Vector.sub(v0, v1);
-  weightLimit.limit(2);
+  drawArrow(v0, v1.mult(50), 'blue');
 }
 
 function drawArrow(base, vec, myColor) {
@@ -52,7 +50,13 @@ function drawArrow(base, vec, myColor) {
   stroke(myColor);
   strokeWeight(2);
   fill(myColor);
+  //let wL0 = createVector(position.x, position.y);
+  //let wL1 = createVector(random(width),random(height));
+  //line(wL0,wL1)
+
   line(position.x, position.y, random(width), random(height));
+  //weightLimit = p5.Vector.sub(v0, v1);
+  //weightLimit.limit(2);
 }
 
 function checkEdges() {
