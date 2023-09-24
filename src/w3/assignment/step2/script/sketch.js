@@ -30,7 +30,11 @@ function draw() {
 
   line(position.x, position.y, mouseX, mouseY);
 
-  stroke(0, 0, 255);
-  strokeWeight(1);
-  line(position.x, position.y, position.x / 1.2, position.y * 1.2);
+  stroke('blue');
+  line(
+    position.x,
+    position.y,
+    position.x + velocity.x * 15,
+    position.y + velocity.y * 15
+  );
 }
