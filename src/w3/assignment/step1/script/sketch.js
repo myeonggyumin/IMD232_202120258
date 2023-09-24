@@ -2,7 +2,6 @@ let position;
 let velocity;
 let acceleration;
 let topSpeed = 5;
-let weightLimit;
 
 function setup() {
   setCanvasContainer('mySketchGoesHere', 3, 2, true);
@@ -18,7 +17,6 @@ function draw() {
   checkEdges();
   show();
   let mouse = createVector(mouseX, mouseY);
-  let circleCenter = createVector(position.x, position.y);
 
   strokeWeight(4);
   stroke(0);
@@ -41,22 +39,27 @@ function show() {
 
   let v0 = createVector();
   let v1 = p5.Vector.random2D();
-  drawArrow(v0, v1.mult(50), 'red');
-  drawArrow(v0, v1.mult(50), 'blue');
+  drawRandomLine(v0, v1.mult(50), 'red');
+  drawRandomLine(v0, v1.mult(50), 'blue');
 }
 
-function drawArrow(base, vec, myColor) {
+function drawRandomLine(base, vec, myColor) {
   push();
   stroke(myColor);
   strokeWeight(2);
   fill(myColor);
-  //let wL0 = createVector(position.x, position.y);
-  //let wL1 = createVector(random(width),random(height));
-  //line(wL0,wL1)
 
-  line(position.x, position.y, random(width), random(height));
-  //weightLimit = p5.Vector.sub(v0, v1);
-  //weightLimit.limit(2);
+  let randomEndpoint = createVector(random(width), random(height));
+  let basePoint = createVector(position.x, position.y);
+  let randomVec = p5.Vector.sub(randomEndpoint, basePoint);
+
+  randomVec.limit(100);
+
+  let endpoint = p5.Vector.add(basePoint, randomVec);
+
+  line(position.x, position.y, endpoint.x, endpoint.y);
+
+  pop();
 }
 
 function checkEdges() {
