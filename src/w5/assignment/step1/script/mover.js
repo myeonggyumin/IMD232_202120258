@@ -1,6 +1,6 @@
-const cNum = 8;
-const rNum = 8;
-const gridSize = 60;
+let cNum = 8;
+let rNum = 8;
+let gridSize; // Adjusted dynamically based on canvas size
 let angleIncrement = 15;
 
 let angle;
@@ -13,6 +13,7 @@ function periodToAngleVel(periodAsFrame) {
 function setup() {
   setCanvasContainer('canvas', 1, 1, true);
   colorMode(HSL, 360, 100, 100, 100);
+  gridSize = Math.min(width, height) / 10.4; // Calculate gridSize dynamically
   background(360, 0, 100);
 
   angle = createVector(0, TAU / 4);
