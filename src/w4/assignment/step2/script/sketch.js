@@ -11,12 +11,10 @@ function setup() {
   background(255);
   moverA = new Mover(width / 3, height / 2, 10);
   gravity = createVector(0, 0.1);
+  throwForce = createVector(0, 0);
 
   mVec = createVector();
   pMVec = createVector();
-
-  savedVelocity = createVector();
-  savedAcceleration = createVector();
 }
 
 function draw() {
@@ -54,8 +52,8 @@ function mousePressed() {
   moverA.handlePress(mouseX, mouseY);
 
   isMouseDraggingMover = true;
-  savedVelocity.set(moverA.vel.x, moverA.vel.y);
-  savedAcceleration.set(moverA.acc.x, moverA.acc.y);
+  savedVelocity = createVector(moverA.vel.x, moverA.vel.y);
+  savedAcceleration = createVector(moverA.acc.x, moverA.acc.y);
 }
 
 function mouseDragged() {
@@ -66,12 +64,11 @@ function mouseDragged() {
 function mouseReleased() {
   if (!isMouseInsideCanvas()) return;
   moverA.stopDragging();
-
+  throwForce = createVector(mouseX - pmouseX, mouseY - pmouseY);
+  moverA.applyForce(throwForce);
   isMouseDraggingMover = false;
-  moverA.vel.set(savedVelocity.x, savedVelocity.y);
-  moverA.acc.set(savedAcceleration.x, savedAcceleration.y);
+}
 
-  const throwingForce = p5.vector.sub(mVec, pMVec);
-
-  moverA.applyForce(throwingForce);
+function isMouseInsideCanvas() {
+  return mouseX >= 0 && mouseX <= width && mouseY >= 0 && mouseY <= height;
 }

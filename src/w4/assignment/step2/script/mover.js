@@ -1,5 +1,7 @@
 class Mover {
   constructor(x, y, mass) {
+    this.mVec = createVector(mouseX, mouseY);
+    this.pMVec = createVector(pmouseX, pmouseY);
     this.pos = createVector(x, y);
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
@@ -14,6 +16,12 @@ class Mover {
     let forceDividedByMass = createVector(force.x, force.y);
     forceDividedByMass.div(this.mass);
     this.acc.add(forceDividedByMass);
+  }
+
+  throwingForce() {
+    let throwingForce = p5.vector.sub(mVec, pMVec);
+    throwingForce.div(this.mass);
+    this.acc.add(throwingForce);
   }
 
   update() {
