@@ -12,11 +12,11 @@ function setup() {
 
   g = createVector(0, 0.1);
 
-  background(255);
+  background('white');
 }
 
 function draw() {
-  background(255);
+  background('white');
   const scaledG = p5.Vector.mult(g, particle.mass);
   particle.applyForce(scaledG);
   particle.update();
@@ -26,5 +26,5 @@ function draw() {
   emitter.applyGravity(g);
   emitter.update();
   emitter.display();
-  console.log(emitter.length);
+  console.log(emitter.balls.length);
 }
