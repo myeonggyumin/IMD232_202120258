@@ -96,7 +96,7 @@ function setup() {
     });
   });
 
-  Composites.chain(ropeC, 0.2, 0, -0.3, 0, { stiffness: 1, length: 0 });
+  Composites.chain(ropeC, 0.2, 0, -0.3, 0, { stiffness: 0.8, length: 30 });
   Composite.add(
     ropeC,
     Constraint.create({
@@ -174,6 +174,4 @@ function draw() {
 }
 
 var arrow = Vertices.fromPath('40 0 40 20 100 20 50 80 40 90 40 50 0 50'),
-  horseShoe = Vertices.fromPath(
-    '30 10 30 17 14 38 14 58 25 79 45 85 65 84 65 60 46 70 34 40 30 44 33 29 40 23 66 23 66 7 53 7'
-  );
+  horseShoe = Vertices.fromPath('30 0 40 20 100 20 50 70 40 80 40 50 0 50');
