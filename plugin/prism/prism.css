@@ -1,12 +1,12 @@
 /* PrismJS 1.29.0
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+sass+scss&plugins=line-highlight+line-numbers+file-highlight+show-language+toolbar+copy-to-clipboard+download-button+match-braces */
-code[class*=language-],
-pre[class*=language-] {
+code[class*='language-'],
+pre[class*='language-'] {
   color: oklch(90% 0 0/1);
   background: 0 0;
-  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
-  text-align: left;
+  text-align: center;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -19,28 +19,28 @@ pre[class*=language-] {
   hyphens: none;
 }
 
-pre[class*=language-] {
+pre[class*='language-'] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
 }
-pre[class*=language-]::-webkit-scrollbar {
+pre[class*='language-']::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.5rem;
 }
-pre[class*=language-]::-webkit-scrollbar-track {
+pre[class*='language-']::-webkit-scrollbar-track {
   background-color: oklch(22% 0 0/1);
 }
-pre[class*=language-]::-webkit-scrollbar-thumb {
+pre[class*='language-']::-webkit-scrollbar-thumb {
   background-color: oklch(80% 0.135 0/1);
 }
 
-:not(pre) > code[class*=language-],
-pre[class*=language-] {
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
   background: oklch(17% 0 0/1);
 }
 
-:not(pre) > code[class*=language-] {
+:not(pre) > code[class*='language-'] {
   padding: 0.1em;
   border-radius: 0.3em;
   white-space: normal;
@@ -185,13 +185,13 @@ pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
   background-color: oklch(80% 0.135 0/1);
 }
 
-pre[class*=language-].line-numbers {
+pre[class*='language-'].line-numbers {
   position: relative;
   padding-left: 3.8em;
   counter-reset: linenumber;
 }
 
-pre[class*=language-].line-numbers > code {
+pre[class*='language-'].line-numbers > code {
   position: relative;
   white-space: inherit;
 }

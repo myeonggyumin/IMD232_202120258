@@ -9,7 +9,7 @@ body {
   line-height: 2rem;
   overflow: hidden;
   margin: 0;
-  font-family: "Spoqa Han Sans Neo", sans-serif;
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
   font-weight: 400;
   color: oklch(90% 0 0/1);
   word-break: keep-all;
@@ -197,6 +197,8 @@ canvas {
   margin-inline: auto;
   padding-block: 2.5rem;
   padding-inline: 5rem;
+  text-align: center;
+  color: lime;
 }
 @media (width < 100rem) {
   .container {
@@ -223,7 +225,7 @@ canvas {
   grid-template-columns: repeat(1, max-content) minmax(15.5ch, 1fr);
   row-gap: 0.5em;
   -moz-column-gap: 1.5em;
-       column-gap: 1.5em;
+  column-gap: 1.5em;
 }
 .table--col-3,
 .grid--col-3 {
@@ -289,4 +291,29 @@ canvas {
 }
 .table::-webkit-scrollbar-thumb {
   background-color: oklch(60% 0 0/1);
+}
+
+button {
+  width: 240px;
+  height: 80px;
+  color: lime;
+  background: black;
+  font-size: 36px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(5, 99, 7, 0.9);
+  transition: 0.3s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button:focus {
+  outline: 0;
+}
+button:hover {
+  background: rgba(5, 99, 7, 0.9);
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(5, 99, 7, 0.9);
 }
