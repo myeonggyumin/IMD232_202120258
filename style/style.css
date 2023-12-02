@@ -197,7 +197,7 @@ canvas {
   margin-inline: auto;
   padding-block: 2.5rem;
   padding-inline: 5rem;
-  text-align: center;
+  text-align: left;
   color: lime;
 }
 @media (width < 100rem) {
@@ -316,4 +316,18 @@ button:hover {
   background: rgba(5, 99, 7, 0.9);
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(5, 99, 7, 0.9);
+}
+
+buttonTitle {
+  width: 300px;
+  height: 60px;
+  color: lime;
+  background: black;
+  font-size: 64px;
+  border: none;
+  transition: 0.3s;
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  transform: translate(-50%, -50%);
 }
