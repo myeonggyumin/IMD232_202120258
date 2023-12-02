@@ -58,11 +58,8 @@ function setup() {
     if (random() > 0.5) each.state = true;
   });
 
-  frameRate(15);
+  frameRate(10);
   background(255);
-  tiles.forEach((each) => {
-    each.display(mouseX, mouseY);
-  });
 }
 
 function draw() {
@@ -82,11 +79,6 @@ function draw() {
 
 function getIdx(row, col) {
   return row * colNum + col;
-}
-
-function mouseClicked() {
-  for (let idx = 0; idx < tiles.length; idx++)
-    if (tiles[idx].toggleState(mouseX, mouseY)) break;
 }
 
 function keyPressed() {

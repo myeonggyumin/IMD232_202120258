@@ -200,6 +200,7 @@ canvas {
   text-align: left;
   color: lime;
 }
+
 @media (width < 100rem) {
   .container {
     padding-block: 2.5rem;
