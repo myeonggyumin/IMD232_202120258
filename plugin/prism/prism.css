@@ -6,7 +6,7 @@ pre[class*='language-'] {
   background: 0 0;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
-  text-align: center;
+  text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -155,7 +155,7 @@ pre[data-line] {
   background-color: oklch(80% 0.135 0/0.4);
   color: oklch(80% 0.135 0/1);
   font: bold 65%/1.5 sans-serif;
-  text-align: center;
+  text-align: left;
   vertical-align: 0.3em;
   border-radius: 999px;
   text-shadow: none;

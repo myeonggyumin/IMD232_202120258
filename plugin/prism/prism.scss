@@ -25,7 +25,7 @@ pre[class*='language-'] {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   // font-size: 1rem;
-  text-align: center;
+  text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -167,7 +167,7 @@ pre[data-line] {
   // color: #f4f1ef;
   color: color.get-color-from-role('primary');
   font: bold 65%/1.5 sans-serif;
-  text-align: center;
+  text-align: left;
   vertical-align: 0.3em;
   border-radius: 999px;
   text-shadow: none;
